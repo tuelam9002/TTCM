@@ -12,8 +12,11 @@ D:\baitap\bai1\bai1\obj\Debug\bai1.exe
 D:\baitap\bai1\bai1\obj\Debug\bai1.pdb
 D:\baitap\bai1\bai1\obj\Debug\bai1.Form2.resources
 D:\baitap\bai1\bai1\obj\Debug\bai1.Nhân_viên.resources
-D:\baitap\bai1\bai1\obj\Debug\bai1.Quản_lý_HOA.resources
 D:\baitap\bai1\bai1\obj\Debug\bai1.Nhà_cung_cấp.resources
 D:\baitap\bai1\bai1\obj\Debug\bai1.Hóa_đơn.resources
-D:\baitap\bai1\bai1\obj\Debug\bai1.Tồn_kho.resources
 D:\baitap\bai1\bai1\obj\Debug\bai1.LOGIN.resources
+D:\baitap\bai1\bai1\bin\Debug\EntityFramework.dll
+D:\baitap\bai1\bai1\bin\Debug\EntityFramework.SqlServer.dll
+D:\baitap\bai1\bai1\bin\Debug\EntityFramework.xml
+D:\baitap\bai1\bai1\bin\Debug\EntityFramework.SqlServer.xml
+D:\baitap\bai1\bai1\obj\Debug\bai1.BaoCao.resources

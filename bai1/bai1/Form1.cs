@@ -36,56 +36,34 @@ namespace bai1
                 pcchinh.Image = bai1.Properties.Resources.hoa2;
                 _img = 3;
             }
+            
+           
             else if (_img == 3)
             {
-                pcchinh.Image = bai1.Properties.Resources.hoa3;
+                pcchinh.Image = bai1.Properties.Resources.hoa12;
                 _img = 4;
             }
             else if (_img == 4)
             {
-                pcchinh.Image = bai1.Properties.Resources.hoa4;
+                pcchinh.Image = bai1.Properties.Resources.hoa7;
                 _img = 5;
             }
             else if (_img == 5)
             {
-                pcchinh.Image = bai1.Properties.Resources.hoa5;
+                pcchinh.Image = bai1.Properties.Resources.hoa82;
                 _img = 6;
             }
             else if (_img == 6)
             {
-                pcchinh.Image = bai1.Properties.Resources.hoa6;
+                pcchinh.Image = bai1.Properties.Resources.hoa9;
                 _img = 7;
             }
             else if (_img == 7)
             {
-                pcchinh.Image = bai1.Properties.Resources.hoa7;
+                pcchinh.Image = bai1.Properties.Resources.hoa13;
                 _img = 8;
             }
-            else if (_img == 8)
-            {
-                pcchinh.Image = bai1.Properties.Resources.hoa8;
-                _img = 9;
-            }
-            else if (_img == 9)
-            {
-                pcchinh.Image = bai1.Properties.Resources.hoa9;
-                _img = 10;
-            }
-            else if (_img == 10)
-            {
-                pcchinh.Image = bai1.Properties.Resources.hoa10;
-                _img = 11;
-            }
-            else if (_img == 11)
-            {
-                pcchinh.Image = bai1.Properties.Resources.hoa11;
-                _img = 12;
-            }
-            else if (_img == 12)
-            {
-                pcchinh.Image = bai1.Properties.Resources.hoa12;
-                _img = 13;
-            }
+
             else 
             {
                 pcchinh.Image = bai1.Properties.Resources.hoa1;
@@ -103,7 +81,9 @@ namespace bai1
 
         private void guna2Button13_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //  Application.Exit();
+            this.Close();
+                
         }
 
         private void danhSáchKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,10 +122,10 @@ namespace bai1
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            Quản_lý_HOA f = new Quản_lý_HOA();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            //Quản_lý_HOA f = new Quản_lý_HOA();
+            //this.Hide();
+            //f.ShowDialog();
+            //this.Show();
         }
 
         private void thôngTinNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -166,15 +146,22 @@ namespace bai1
 
         private void btnTonKho_Click(object sender, EventArgs e)
         {
-            Tồn_kho f = new Tồn_kho();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+          
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThuChi_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

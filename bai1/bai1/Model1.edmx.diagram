@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eee0ec234b5a487bb2109fcacc74de13" Name="Diagram1">
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.CTPHIEUNHAP" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.CTHOADON" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.GIOVANG" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.HOA" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.HOADON" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.LOAIHOA" Width="1.5" PointX="5.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.NHACUNGCAP" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.NHANVIEN" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.PHIEUNHAP" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SHOPHOATHUTRANGModel.TAIKHOAN" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="SHOPHOATHUTRANGModel.FK_CTHOADON_HOADON" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPHOATHUTRANGModel.FK__HOA__MALOAIHOA__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPHOATHUTRANGModel.FK_HOADON_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPHOATHUTRANGModel.FK_HOADON_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="SHOPHOATHUTRANGModel.FK_PHIEUNHAP_NHANVIEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

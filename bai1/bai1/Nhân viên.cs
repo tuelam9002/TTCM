@@ -14,24 +14,21 @@ namespace bai1
 {
     public partial class Nhân_viên : Form
     {
-        SqlConnection connection;
-        SqlCommand command;
-        string str = @"Data Source=DESKTOP-4AJU5DJ\SQLEXPRESS;Initial Catalog=SHOPHOATHUTRANG;Integrated Security=True";
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
-
-        void loadData()
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "select* from NHANVIEN";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dgvNV.DataSource = table;
-        }
+      
+       
         public Nhân_viên()
         {
             InitializeComponent();
+        }
+        public bool kiemtra()
+        {
+            if (txtTNV.Text == "" || txtSGL.Text == "" || txtDCNV.Text == "" || txtLuong.Text == "" || txtSDTNV.Text == ""||cbGTNV.Text == "" )
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin!");
+                return false;
+            }
+            else
+                return true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,56 +48,46 @@ namespace bai1
 
         private void Nhân_viên_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(str);
-            connection.Open();
-            loadData();
+            // TODO: This line of code loads data into the 'sHOPHOATHUTRANGDataSet6.NHANVIEN' table. You can move, or remove it, as needed.
+            this.nHANVIENTableAdapter2.Fill(this.sHOPHOATHUTRANGDataSet6.NHANVIEN);
+            
+            
         }
 
-        private void dgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i;
-            i = dgvNV.CurrentRow.Index;
-            txtMNV.Text = dgvNV.Rows[i].Cells[0].Value.ToString();
-           
-            txtTNV.Text = dgvNV.Rows[i].Cells[1].Value.ToString();
-            
-            txtDCNV.Text = dgvNV.Rows[i].Cells[3].Value.ToString();
-            
-            txtSDTNV.Text = dgvNV.Rows[i].Cells[5].Value.ToString();
-            //dtpkSNNV.Text = dgvNV.Rows[i].Cells[4].Value.ToString();
-            cbGTNV.Text=dgvNV.Rows[i].Cells[6].Value.ToString();
-            txtSGL.Text = dgvNV.Rows[i].Cells[2].Value.ToString();
-            txtLuong.Text = dgvNV.Rows[i].Cells[4].Value.ToString();  
-        }
+        
 
         private void btnThemNV_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "insert into NHANVIEN values('" + txtMNV.Text + "',N'" + txtTNV.Text + "','" + txtDCNV.Text + "','" + txtSDTNV.Text + "',N'" + cbGTNV.Text + "',N'" + txtSGL.Text + "','" + txtLuong.Text + "')";
-            command.ExecuteNonQuery();
-            loadData();
+            if (!kiemtra())
+            {
+                return;
+            }
+            using (SHOPHOATHUTRANGEntities1 quanli = new SHOPHOATHUTRANGEntities1()) 
+
+            {
+                quanli.insertNhanvien(txtTNV.Text, int.Parse(txtSGL.Text), txtDCNV.Text,int.Parse(txtLuong.Text), txtSDTNV.Text, cbGTNV.Text);
+                quanli.SaveChanges();
+                MessageBox.Show("Thêm!");
+                Nhân_viên_Load(sender, e);
+            }
+            
         }
 
         private void btnXoaNV_Click(object sender, EventArgs e)
         {
-            DialogResult tb;
-            tb = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (tb == DialogResult.OK)
+            using (SHOPHOATHUTRANGEntities1 quanli = new SHOPHOATHUTRANGEntities1())
             {
-                SqlConnection cns = new SqlConnection(str);
-                cns.Open();
-                string a="delete from NHANVIEN where MANV = '" + txtMNV.Text + "'";
-                SqlCommand cmd = new SqlCommand(a, cns);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Xóa thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                loadData();
-                cns.Close();
+                quanli.deleteNV(manv);
+                quanli.SaveChanges();
+                MessageBox.Show("Da xoa");
+                Nhân_viên_Load(sender, e);
             }
+            
         }
 
         private void btnCapNhatNV_Click(object sender, EventArgs e)
         {
-            txtMNV.Text = "";
+           
             txtTNV.Text = "";
             txtDCNV.Text = "";
             txtSDTNV.Text = "";
@@ -108,6 +95,54 @@ namespace bai1
             txtLuong.Text = "";
             cbGTNV.Text = "";
             dtpkSNNV.Text = "1/1/1900";
+        }
+        string manv = "";
+        private void btnSuaNV_Click(object sender, EventArgs e)
+        {
+            if (manv == "")
+            {
+                MessageBox.Show("Hãy chọn nhân viên cần sửa!");
+                return;
+            }
+            using (SHOPHOATHUTRANGEntities1 quanli = new SHOPHOATHUTRANGEntities1())
+            {
+                NHANVIEN nv = quanli.NHANVIEN.FirstOrDefault(p => p.MANV == manv);
+                nv.TENNV = txtTNV.Text;
+                nv.DIACHI = txtDCNV.Text;
+                nv.GIOITINH = cbGTNV.Text;
+                nv.LUONG = int.Parse(txtLuong.Text);
+                nv.SOGIOLAM = int.Parse(txtSGL.Text);
+                nv.SDT = txtSDTNV.Text;
+                quanli.SaveChanges();
+                MessageBox.Show("Sua thanh cong!");
+                Nhân_viên_Load(sender, e);
+               
+            }
+        }
+
+        private void btnTimkiemNV_Click(object sender, EventArgs e)
+        {
+            using (SHOPHOATHUTRANGEntities1 quanli = new SHOPHOATHUTRANGEntities1())
+            {
+                dgvNV.DataSource = quanli.NHANVIEN.Where(p => p.MANV.Contains(txtTKKNV.Text.Trim())).ToList();
+                MessageBox.Show("Tìm kiếm thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+        }
+
+        private void dgvNV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            manv = dgvNV.CurrentRow.Cells[0].Value.ToString();
+            txtTNV.Text = dgvNV.CurrentRow.Cells[1].Value.ToString();
+            txtDCNV.Text = dgvNV.CurrentRow.Cells[3].Value.ToString();
+            txtSDTNV.Text = dgvNV.CurrentRow.Cells[4].Value.ToString();
+            txtSGL.Text = dgvNV.CurrentRow.Cells[2].Value.ToString();
+            cbGTNV.Text = dgvNV.CurrentRow.Cells[6].Value.ToString();
+            txtLuong.Text = dgvNV.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

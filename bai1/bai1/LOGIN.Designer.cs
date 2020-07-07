@@ -182,6 +182,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "LOGIN";
             this.Text = "LOGIN";
+            this.Load += new System.EventHandler(this.LOGIN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

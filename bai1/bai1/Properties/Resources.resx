@@ -163,6 +163,9 @@
   <data name="niceflower_sbux1mom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\niceflower_sbux1mom.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hn1-8a2de1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hn1-8a2de1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hinh-anh-nhung-bong-hoa-dep-nhat-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hinh-anh-nhung-bong-hoa-dep-nhat-12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,6 +208,9 @@
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hoa3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoa3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,11 +250,11 @@
   <data name="facebook_128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook_128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Addchucvu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Addchucvu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="anh-gif-hoa_055150392" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anh-gif-hoa_055150392.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hinh-anh-nhung-bong-hoa-dep-nhat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hinh-anh-nhung-bong-hoa-dep-nhat-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hoa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoa2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,8 +313,8 @@
   <data name="hoa81" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoa81.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Addchucvu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Addchucvu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hinh-anh-nhung-bong-hoa-dep-nhat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh-anh-nhung-bong-hoa-dep-nhat-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hoa111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoa111.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,7 +358,7 @@
   <data name="fb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fb.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hn1-8a2de1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hn1-8a2de1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hoa82" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoa82.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
