@@ -83,7 +83,7 @@ namespace bai1
 
         private void LOGIN_Load(object sender, EventArgs e)
         {
-            //test
+            
         }
     }
 }
